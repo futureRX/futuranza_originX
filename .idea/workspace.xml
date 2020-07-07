@@ -19,11 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 16:17">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 00:44">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_07_07_22_32__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_07_07_22_32__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_07_07_22_32__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_07_07_22_32__Default_Changelist_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dual_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/dual_network.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_play.py" beforeDir="false" afterPath="$PROJECT_DIR$/self_play.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_cycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_cycle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="4a1617c015858a099f042e1be2bd1ee370ceb2c6" />
@@ -81,7 +85,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/AI/bin/python" />
+      <option name="SDK_HOME" value="C:\Users\future\anaconda3\envs\AI\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -123,7 +127,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/AI/bin/python" />
+      <option name="SDK_HOME" value="C:\Users\future\anaconda3\envs\AI\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -288,9 +292,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="7/7 16:17" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="120" y="397" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594107529930">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state x="60" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594132256039">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="60" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1594132256039" />
     <state x="120" y="397" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594107529930" />
     <state x="409" y="80" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594048272594">
       <screen x="0" y="0" width="1280" height="680" />
@@ -326,25 +331,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="503" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594053056460" />
-    <state width="1112" height="930" key="GridCell.Tab.0.bottom" timestamp="1594108851944">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="454" height="580" key="GridCell.Tab.0.bottom" timestamp="1594133004704">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="483" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="454" height="580" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594133004704" />
     <state width="1112" height="930" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594108851944" />
-    <state width="1112" height="930" key="GridCell.Tab.0.center" timestamp="1594108851944">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="454" height="580" key="GridCell.Tab.0.center" timestamp="1594133004704">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="483" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="454" height="580" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594133004704" />
     <state width="1112" height="930" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594108851944" />
-    <state width="1112" height="930" key="GridCell.Tab.0.left" timestamp="1594108851944">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="454" height="580" key="GridCell.Tab.0.left" timestamp="1594133004704">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="483" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="454" height="580" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594133004704" />
     <state width="1112" height="930" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594108851944" />
-    <state width="1112" height="930" key="GridCell.Tab.0.right" timestamp="1594108851944">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="454" height="580" key="GridCell.Tab.0.right" timestamp="1594133004704">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="483" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="454" height="580" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594133004704" />
     <state width="1112" height="930" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594108851944" />
     <state width="2393" height="397" key="GridCell.Tab.1.bottom" timestamp="1594107339021">
       <screen x="0" y="23" width="2560" height="1337" />
@@ -362,10 +367,10 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="2393" height="397" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594107339021" />
-    <state x="296" y="23" key="SettingsEditor" timestamp="1594107632530">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state x="148" y="0" key="SettingsEditor" timestamp="1594128973495">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="148" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594053495156" />
+    <state x="148" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594128973495" />
     <state x="296" y="23" key="SettingsEditor/0.23.2560.1337@0.23.2560.1337" timestamp="1594107632530" />
     <state x="542" y="153" key="Vcs.Push.Dialog.v2" timestamp="1594106259191">
       <screen x="0" y="23" width="2560" height="1337" />
@@ -381,18 +386,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="201" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1594052207631" />
+    <state x="483" y="112" key="refactoring.ChangeSignatureDialog" timestamp="1594131629853">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="483" y="112" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1594131629853" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game.py</url>
-          <line>153</line>
+          <line>156</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game.py</url>
-          <line>192</line>
+          <line>195</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

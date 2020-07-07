@@ -55,7 +55,7 @@ class State:
                                 8, 7, 6, 5, 4, 5, 6, 7, 8,
                                 0, 0, 0, 0, 0, 0, 0, 0]
 
-        self.lose = True
+        self.lose = False
         self.hansoku = False
 
 
@@ -69,15 +69,17 @@ class State:
             check = check.append(n)
 
     def is_lose(self):
+        #return self.lose
 
         #print("is_loseの確認")
+        """"
         k_check = mp.Manager().list()
         p = Pool(mp.cpu_count())
         values = [(k_check,x) for x in range(81)]
         p.map(self.king_check,values)
         #print(k_check)
         p.close()
-
+        
 
         if len(k_check) == 0:
             #print("玉ない")
@@ -90,6 +92,7 @@ class State:
             return True
 
         """
+
         for i in range(81):
 
             if self.pieces[i] == 4:  # ライオン存在
@@ -99,7 +102,7 @@ class State:
 
 
         return True
-        """
+
 
 
     #勝ちかどうか
@@ -244,7 +247,8 @@ class State:
 
     # 合法手のリストの取得
     def legal_actions(self):
-        #actions = []
+        actions = []
+        """
         actions = mp.Manager().list()
         p = Pool(mp.cpu_count())
         values = [(actions,x) for x in range(81)]
@@ -299,7 +303,7 @@ class State:
                             #print("駒うち",p)
                             #print(self.position_to_action(p, 74 - 1 + capture))
                             actions.append(self.position_to_action(p, 74 - 1 + capture))
-            """
+            """"""
         #print("actions",actions)
         return actions
 
@@ -504,7 +508,9 @@ class State:
                 # 相手の駒が存在する時は取る
                 piece_type = state.enemy_pieces[80 - position_dst]
                 if piece_type != 0:
-                    if piece_type != 4:
+                    if piece_type == 4:
+                        self.lose = True
+                    else:
                         if piece_type > 8:  # なりごまの処理
                             piece_type = piece_type - 10
                         state.pieces[80 + piece_type] += 1  # 持ち駒+1
