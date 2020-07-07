@@ -24,8 +24,8 @@ class State:
                     (0, -1),(0, -2), (0, -3), (0, -4), (0, -5), (0, -6), (0, -7), (0, -8))
         self.hop = ()
         # 駒の配置
-        self.pieces = pieces if pieces != None else [0] * (81 + 3)
-        self.enemy_pieces = enemy_pieces if enemy_pieces != None else [0] * (81 + 3)
+        self.pieces = pieces if pieces != None else [0] * (81 + 8)
+        self.enemy_pieces = enemy_pieces if enemy_pieces != None else [0] * (81 + 8)
         self.depth = depth
         """
         self.pieces = pieces if pieces != None else [0] * (12 + 3)
@@ -62,8 +62,34 @@ class State:
 
     # 負けかどうか
 
+    def king_check(self,inputs):
+        check,n = inputs
+        if self.pieces[n] == 4 or self.pieces[n] == 14:
+            print("append")# ライオン存在
+            check = check.append(n)
+
     def is_lose(self):
 
+        print("is_loseの確認")
+        k_check = mp.Manager().list()
+        p = Pool(mp.cpu_count())
+        values = [(k_check,x) for x in range(81)]
+        p.map(self.king_check,values)
+        print(k_check)
+        p.close()
+
+
+        if len(k_check) == 0:
+            print("玉ない")
+            return True
+        elif len(k_check) >0:
+            print("玉あり")
+            return False
+        else:
+            print("error")
+            return True
+
+        """
         for i in range(81):
 
             if self.pieces[i] == 4:  # ライオン存在
@@ -73,7 +99,7 @@ class State:
 
 
         return True
-
+        """
 
 
     #勝ちかどうか
@@ -138,14 +164,14 @@ class State:
         def pieces_array_of(pieces):
             table_list = []
 
-            for j in range(1, 8):
+            for j in range(1, 9):
                 table = [0] * 81
                 table_list.append(table)
                 for i in range(81):
                     if pieces[i] == j:
                         table[i] = 1
 
-            for j in range(1, 8):#持ち駒参照
+            for j in range(1, 9):#持ち駒参照
                 flag = 1 if pieces[80 + j] > 0 else 0
                 table = [flag] * 81
                 table_list.append(table)
@@ -400,7 +426,7 @@ class State:
 
     # 次の状態の取得
     def next(self, action):
-        #hzkr0 = ('', '歩', '角', '飛', '王', '金', '銀', '桂', '香', '', '', 'と', '馬', '龍', '', '', 'NG', 'KM', 'KY',)
+        hzkr0 = ('', '歩', '角', '飛', '玉', '金', '銀', '桂', '香', '', '', 'と', '馬', '龍', '玉', '金', 'NG', 'KM', 'KY',)
 
         # 次の状態の作成
         state = State(self.pieces.copy(), self.enemy_pieces.copy(), self.depth + 1)
@@ -453,14 +479,14 @@ class State:
                 position_src = x + y * 9
 
                 # 駒の移動
-                """
+
                 if self.depth % 2 == 0:
                     print(state.depth, "手*", 9 - position_dst % 9, int(position_dst / 9) + 1,
                           hzkr0[state.pieces[position_src]])
                 elif self.depth % 2 == 1:
                     print(state.depth, "手：", 9 - (80 - position_dst) % 9, int((80 - position_dst) / 9) + 1,
                           hzkr0[state.pieces[position_src]])
-                """
+
 
                 # 歩と香車は、一段目で強制的に成る
                 if position_dst < 9 and (state.pieces[position_src] == 1 or state.pieces[position_src] == 8):
@@ -487,7 +513,7 @@ class State:
                 xx = position_dst % 9 + 1
                 yy = int(position_dst / 9) + 1
 
-                #print(state.depth, "手：", xx, yy, hzkr0[capture], "打")
+                print(state.depth, "手：", xx, yy, hzkr0[capture], "打")
 
                 state.pieces[position_dst] = capture
                 state.pieces[80 + capture] -= 1  # 持ち駒-1
@@ -512,8 +538,8 @@ class State:
     def __str__(self):
         pieces0 = self.pieces if self.is_first_player() else self.enemy_pieces
         pieces1 = self.enemy_pieces if self.is_first_player() else self.pieces
-        hzkr0 = ('', '歩', '角', '飛', '王', '金', '銀', '桂', '香', '','', 'と', '馬', '龍', '', '', 'NG', 'KM', 'KY')
-        hzkr1 = ('', 'ふ', 'ｶｸ', 'ﾋｼ', 'ｵｳ', 'ｷﾝ', 'ｷﾞ', 'ｹｲ', 'ｷｮ', '','', 'と', '馬', '龍', '', '', 'NG', 'KM', 'KY')
+        hzkr0 = ('  ', '歩', '角', '飛', '王', '金', '銀', '桂', '香', '','', 'と', '馬', '龍', '  ', '  ', 'NG', 'KM', 'KY')
+        hzkr1 = ('  ', 'ふ', 'ｶｸ', 'ﾋｼ', 'ｵｳ', 'ｷﾝ', 'ｷﾞ', 'ｹｲ', 'ｷｮ', '','', 'と', '馬', '龍', '  ', '  ', 'NG', 'KM', 'KY')
 
         # 後手の持ち駒
         str = ' ['

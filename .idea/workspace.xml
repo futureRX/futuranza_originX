@@ -19,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 00:44">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 13:56">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dual_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/dual_network.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_play.py" beforeDir="false" afterPath="$PROJECT_DIR$/self_play.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_cycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_cycle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594053006052</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="7/7 13:56">
+      <created>1594097826477</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594097826477</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -265,7 +268,8 @@
     <MESSAGE value="7/6 10:15" />
     <MESSAGE value="7/6 20:48" />
     <MESSAGE value="7/7 00:44" />
-    <option name="LAST_COMMIT_MESSAGE" value="7/7 00:44" />
+    <MESSAGE value="7/7 13:56" />
+    <option name="LAST_COMMIT_MESSAGE" value="7/7 13:56" />
   </component>
   <component name="WindowStateProjectService">
     <state x="409" y="80" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594048272594">
@@ -300,35 +304,52 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="503" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594053056460" />
-    <state width="2158" height="323" key="GridCell.Tab.0.bottom" timestamp="1594097543069">
+    <state width="1112" height="930" key="GridCell.Tab.0.bottom" timestamp="1594106185990">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="2158" height="323" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
-    <state width="2158" height="323" key="GridCell.Tab.0.center" timestamp="1594097543069">
+    <state width="1112" height="930" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594106185990" />
+    <state width="1112" height="930" key="GridCell.Tab.0.center" timestamp="1594106185990">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="2158" height="323" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
-    <state width="2158" height="323" key="GridCell.Tab.0.left" timestamp="1594097543068">
+    <state width="1112" height="930" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594106185990" />
+    <state width="1112" height="930" key="GridCell.Tab.0.left" timestamp="1594106185989">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="2158" height="323" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543068" />
-    <state width="2158" height="323" key="GridCell.Tab.0.right" timestamp="1594097543069">
+    <state width="1112" height="930" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594106185989" />
+    <state width="1112" height="930" key="GridCell.Tab.0.right" timestamp="1594106185990">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="2158" height="323" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
+    <state width="1112" height="930" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594106185990" />
+    <state width="2393" height="397" key="GridCell.Tab.1.bottom" timestamp="1594104949223">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2393" height="397" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594104949223" />
+    <state width="2393" height="397" key="GridCell.Tab.1.center" timestamp="1594104949223">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2393" height="397" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594104949223" />
+    <state width="2393" height="397" key="GridCell.Tab.1.left" timestamp="1594104949223">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2393" height="397" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594104949223" />
+    <state width="2393" height="397" key="GridCell.Tab.1.right" timestamp="1594104949223">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2393" height="397" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594104949223" />
     <state x="296" y="23" key="SettingsEditor" timestamp="1594092133855">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="148" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594053495156" />
     <state x="296" y="23" key="SettingsEditor/0.23.2560.1337@0.23.2560.1337" timestamp="1594092133855" />
-    <state x="271" y="66" key="Vcs.Push.Dialog.v2" timestamp="1594053211618">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="542" y="153" key="Vcs.Push.Dialog.v2" timestamp="1594097838607">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="271" y="66" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594053211618" />
+    <state x="542" y="153" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1594097838607" />
     <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594053187037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -337,5 +358,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="201" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1594052207631" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game.py</url>
+          <line>191</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
