@@ -65,28 +65,28 @@ class State:
     def king_check(self,inputs):
         check,n = inputs
         if self.pieces[n] == 4 or self.pieces[n] == 14:
-            print("append")# ライオン存在
+            #print("append")# ライオン存在
             check = check.append(n)
 
     def is_lose(self):
 
-        print("is_loseの確認")
+        #print("is_loseの確認")
         k_check = mp.Manager().list()
         p = Pool(mp.cpu_count())
         values = [(k_check,x) for x in range(81)]
         p.map(self.king_check,values)
-        print(k_check)
+        #print(k_check)
         p.close()
 
 
         if len(k_check) == 0:
-            print("玉ない")
+            #print("玉ない")
             return True
         elif len(k_check) >0:
-            print("玉あり")
+            #print("玉あり")
             return False
         else:
-            print("error")
+            #print("error")
             return True
 
         """
@@ -165,6 +165,7 @@ class State:
             table_list = []
 
             for j in range(1, 9):
+                #print(j)
                 table = [0] * 81
                 table_list.append(table)
                 for i in range(81):
@@ -426,12 +427,12 @@ class State:
 
     # 次の状態の取得
     def next(self, action):
-        hzkr0 = ('', '歩', '角', '飛', '玉', '金', '銀', '桂', '香', '', '', 'と', '馬', '龍', '玉', '金', 'NG', 'KM', 'KY',)
+        #hzkr0 = ('', '歩', '角', '飛', '玉', '金', '銀', '桂', '香', '', '', 'と', '馬', '龍', '玉', '金', 'NG', 'KM', 'KY',)
 
         # 次の状態の作成
         state = State(self.pieces.copy(), self.enemy_pieces.copy(), self.depth + 1)
 
-        if action > 10000:
+        if action > 9999:
             action = action-10000
             position_dst, position_src = self.action_to_position(action)
             x = position_dst % 9 - self.dxy[position_src][0]
@@ -474,19 +475,20 @@ class State:
             # 駒の移動
             if position_src < 74:  # dxyの数
                 # 駒の移動元
+                #print(position_dst,position_src,action)
                 x = position_dst % 9 - self.dxy[position_src][0]
                 y = int(position_dst / 9) - self.dxy[position_src][1]
                 position_src = x + y * 9
 
                 # 駒の移動
-
+                """
                 if self.depth % 2 == 0:
                     print(state.depth, "手*", 9 - position_dst % 9, int(position_dst / 9) + 1,
                           hzkr0[state.pieces[position_src]])
                 elif self.depth % 2 == 1:
                     print(state.depth, "手：", 9 - (80 - position_dst) % 9, int((80 - position_dst) / 9) + 1,
                           hzkr0[state.pieces[position_src]])
-
+                """
 
                 # 歩と香車は、一段目で強制的に成る
                 if position_dst < 9 and (state.pieces[position_src] == 1 or state.pieces[position_src] == 8):
@@ -495,6 +497,7 @@ class State:
                 elif position_dst < 18 and state.pieces[position_src] == 7:
                     state.pieces[position_dst] = state.pieces[position_src] + 10
                 else:
+                    #print(position_dst,position_src,x,y)
                     state.pieces[position_dst] = state.pieces[position_src]
                 state.pieces[position_src] = 0
 
@@ -513,7 +516,7 @@ class State:
                 xx = position_dst % 9 + 1
                 yy = int(position_dst / 9) + 1
 
-                print(state.depth, "手：", xx, yy, hzkr0[capture], "打")
+                #print(state.depth, "手：", xx, yy, hzkr0[capture], "打")
 
                 state.pieces[position_dst] = capture
                 state.pieces[80 + capture] -= 1  # 持ち駒-1
