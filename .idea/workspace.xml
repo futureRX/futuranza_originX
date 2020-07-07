@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 00:44" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/remotes/origin/master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="4a1617c015858a099f042e1be2bd1ee370ceb2c6" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/futureRX/futuranza_origin.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eI8akdisETJVY4S3GYrYyiyQUv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hashimoto" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.train_cycle">
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="futuranza" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="human_play" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="futuranza" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/human_play.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_cycle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="futuranza_origin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\future\anaconda3\envs\AI\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_cycle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train_cycle" />
+        <item itemvalue="Python.game" />
+        <item itemvalue="Python.human_play" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="" />
+      <created>1593997811489</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593997811489</updated>
+    </task>
+    <task id="LOCAL-00001" summary="10:11">
+      <created>1593997866642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593997866642</updated>
+    </task>
+    <task id="LOCAL-00002" summary="7/6 10:13">
+      <created>1593998018453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593998018453</updated>
+    </task>
+    <task id="LOCAL-00003" summary="7/6 10:15">
+      <created>1593998111961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593998111961</updated>
+    </task>
+    <task id="LOCAL-00004" summary="7/6 10:15">
+      <created>1594003218101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594003218101</updated>
+    </task>
+    <task id="LOCAL-00005" summary="7/6 10:15">
+      <created>1594003250523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594003250524</updated>
+    </task>
+    <task id="LOCAL-00006" summary="7/6 10:15">
+      <created>1594003421589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594003421589</updated>
+    </task>
+    <task id="LOCAL-00007" summary="7/6 10:15">
+      <created>1594036067363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594036067363</updated>
+    </task>
+    <task id="LOCAL-00008" summary="7/6 20:48">
+      <created>1594036094242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594036094242</updated>
+    </task>
+    <task id="LOCAL-00009" summary="7/7 00:44">
+      <created>1594050297874</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594050297874</updated>
+    </task>
+    <task id="LOCAL-00010" summary="7/7 00:44">
+      <created>1594052345237</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1594052345237</updated>
+    </task>
+    <task id="LOCAL-00011" summary="7/7 00:44">
+      <created>1594053006052</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594053006052</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="10:11" />
+    <MESSAGE value="7/6 10:13" />
+    <MESSAGE value="7/6 10:15" />
+    <MESSAGE value="7/6 20:48" />
+    <MESSAGE value="7/7 00:44" />
+    <option name="LAST_COMMIT_MESSAGE" value="7/7 00:44" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="409" y="80" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594048272594">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="409" y="80" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594048272594" />
+    <state x="357" y="0" key="#train_cycle" timestamp="1594054069899">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="357" y="0" key="#train_cycle/0.0.1280.680@0.0.1280.680" timestamp="1594054069899" />
+    <state x="120" y="49" key="DiffContextDialog" timestamp="1594052232024">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="120" y="49" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1594052232024" />
+    <state x="508" y="95" key="EnvironmentVariablesDialog" timestamp="1594054063543">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="508" y="95" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594054063543" />
+    <state x="459" y="88" key="FileChooserDialogImpl" timestamp="1594082573878">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="459" y="88" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594082573878" />
+    <state x="132" y="23" key="Git.Interactive.Rebase.Dialog" timestamp="1594052235830">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="132" y="23" key="Git.Interactive.Rebase.Dialog/0.0.1280.680@0.0.1280.680" timestamp="1594052235830" />
+    <state x="503" y="238" key="Github.ShareDialog" timestamp="1594053056460">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="503" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594053056460" />
+    <state width="1259" height="483" key="GridCell.Tab.0.bottom" timestamp="1594054686805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="483" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="1259" height="483" key="GridCell.Tab.0.center" timestamp="1594054686805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="483" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="1259" height="483" key="GridCell.Tab.0.left" timestamp="1594054686805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="483" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state width="1259" height="483" key="GridCell.Tab.0.right" timestamp="1594054686805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="483" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
+    <state x="148" y="0" key="SettingsEditor" timestamp="1594053495156">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="148" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594053495156" />
+    <state x="271" y="66" key="Vcs.Push.Dialog.v2" timestamp="1594053211618">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="271" y="66" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594053211618" />
+    <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594053187037">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594053187037" />
+    <state x="435" y="201" key="git4idea.rebase.GitRebaseDialog" timestamp="1594052207631">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="435" y="201" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1594052207631" />
+  </component>
+</project>
