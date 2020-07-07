@@ -15,9 +15,12 @@ from pathlib import Path
 import numpy as np
 import pickle
 import os
+import multiprocessing as mp
+from multiprocessing import Pool
+
 
 # パラメータの準備
-SP_GAME_COUNT = 100 # セルフプレイを行うゲーム数（本家は25000）
+SP_GAME_COUNT = 5 # セルフプレイを行うゲーム数（本家は25000）
 SP_TEMPERATURE = 1.0 # ボルツマン分布の温度パラメータ
 
 # 先手プレイヤーの価値
@@ -72,10 +75,19 @@ def play(model):
         value = -value
     return history
 
+
+def multi_play(inputs):
+    history,model,n = inputs
+    h = play(model)
+    history.extend(h)
+    # 出力
+    print('\rSelfPlay {}/{}'.format(n + 1,SP_GAME_COUNT ), end='')
+
+
 # セルフプレイ
 def self_play():
     # 学習データ
-    history = []
+    history = [] #mp.Manager().list()
 
     # ベストプレイヤーのモデルの読み込み
     model = load_model('model/best.h5')
@@ -88,6 +100,13 @@ def self_play():
         history.extend(h)
         # 出力
         print('\rSelfPlay {}/{}'.format(i+1, SP_GAME_COUNT), end='')
+
+    """
+    p =Pool(mp.cpu_count())
+    values =[(history,model,x) for x in range(SP_GAME_COUNT)]
+    result = p.map(multi_play,values)
+    p.close()
+    """
     print('')
 
     # 学習データの保存

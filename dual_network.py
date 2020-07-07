@@ -10,6 +10,9 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras import backend as K
 import os
+import multiprocessing as mp
+from multiprocessing import Pool
+
 
 # パラメータの準備
 DN_FILTERS  = 256 # 畳み込み層のカーネル数（本家は256）
@@ -32,22 +35,6 @@ def conv(filters):
 # 残差ブロックの作成
 def residual_block():
     def f(x):
-        sc = x
-        x = conv(DN_FILTERS)(x)
-        x = BatchNormalization()(x)
-        x = Activation('relu')(x)
-        x = conv(DN_FILTERS)(x)
-        x = BatchNormalization()(x)
-        x = Add()([x, sc])
-        x = Activation('relu')(x)
-        sc = x
-        x = conv(DN_FILTERS)(x)
-        x = BatchNormalization()(x)
-        x = Activation('relu')(x)
-        x = conv(DN_FILTERS)(x)
-        x = BatchNormalization()(x)
-        x = Add()([x, sc])
-        x = Activation('relu')(x)
         sc = x
         x = conv(DN_FILTERS)(x)
         x = BatchNormalization()(x)

@@ -163,10 +163,69 @@ class State:
     def action_to_position(self, action):
         return (int(action / 100), action % 100)
 
+    def leg_act(self,inputs):
+        actions,p = inputs
+        if self.pieces[p] != 0:
+            actions.extend(self.legal_actions_pos(p))
+            # 持ち駒の配置時
+        if self.pieces[p] == 0 and self.enemy_pieces[80 - p] == 0:
+            for capture in range(8):  # 持ち駒の参照
+                capture = capture + 1
+                # print(capture)
+                if capture == 1:
+                    if p > 8:  # 歩、一段の禁じ手回避
+                        # 二歩の回避
+                        i = p % 9
+                        nifucheck = 0
+                        for j in range(9):
+                            if self.pieces[(i + 9 * j)] == 1:
+                                nifucheck = nifucheck + 1
+                        if nifucheck == 0:
+                            if self.pieces[80 + capture] > 0:
+                                # print("歩回避で座標は",p)
+                                # print(self.position_to_action(p, 74 - 1 + capture))
+                                actions.append(self.position_to_action(p, 74 - 1 + capture))
+                        else:
+                            pass
+                    else:
+                        pass
+                # 香車、一段の禁じ手回避したら
+                elif capture == 8:
+                    if p > 8:
+                        if self.pieces[80 + capture] > 0:
+                            # print("香車回避",p)
+                            # print(self.position_to_action(p, 74 - 1 + capture))
+                            actions.append(self.position_to_action(p, 74 - 1 + capture))
+                    else:
+                        pass
+                # 桂馬、一、二段の禁じ手回避したら
+                elif capture == 7:
+                    if p > 17:
+                        if self.pieces[80 + capture] > 0:
+                            # print("桂馬回避",p)
+                            # print(self.position_to_action(p, 74 - 1 + capture))
+                            actions.append(self.position_to_action(p, 74 - 1 + capture))
+                    else:
+                        pass
+                # 歩と香車と桂馬以外は
+                else:
+                    if self.pieces[80 + capture] > 0:
+                        # print("駒うち",p)
+                        # print(self.position_to_action(p, 74 - 1 + capture))
+                        actions.append(self.position_to_action(p, 74 - 1 + capture))
+
 
     # 合法手のリストの取得
     def legal_actions(self):
-        actions = []
+        #actions = []
+        actions = mp.Manager().list()
+        p = Pool(mp.cpu_count())
+        values = [(actions,x) for x in range(81)]
+        p.map(self.leg_act, values)
+        p.close()
+
+
+        """
         for p in range(81):
             # 駒の移動時
             if self.pieces[p] != 0:
@@ -213,6 +272,7 @@ class State:
                             #print("駒うち",p)
                             #print(self.position_to_action(p, 74 - 1 + capture))
                             actions.append(self.position_to_action(p, 74 - 1 + capture))
+            """
         #print("actions",actions)
         return actions
 

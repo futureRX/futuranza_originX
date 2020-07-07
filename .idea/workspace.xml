@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 00:44" />
+    <list default="true" id="752bf897-2ea7-42c8-9a45-df20f02f25b2" name="Default Changelist" comment="7/7 00:44">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dual_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/dual_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_play.py" beforeDir="false" afterPath="$PROJECT_DIR$/self_play.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_cycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_cycle.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,20 +63,29 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hashimoto" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.train_cycle">
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="futuranza_origin" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="futuranza_origin" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.game">
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="futuranza" />
+      <module name="futuranza_origin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/AI/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game.py" />
@@ -106,17 +122,14 @@
       <module name="futuranza_origin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\future\anaconda3\envs\AI\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_cycle.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -125,8 +138,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_cycle" />
         <item itemvalue="Python.game" />
+        <item itemvalue="Python.train_cycle" />
+        <item itemvalue="Python.train_cycle" />
+        <item itemvalue="Python.train_cycle" />
         <item itemvalue="Python.human_play" />
       </list>
     </recent_temporary>
@@ -257,6 +272,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="409" y="80" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594048272594" />
+    <state x="1031" y="350" key="#game" timestamp="1594097207041">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1031" y="350" key="#game/0.23.2560.1337@0.23.2560.1337" timestamp="1594097207041" />
     <state x="357" y="0" key="#train_cycle" timestamp="1594054069899">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -281,26 +300,31 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="503" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594053056460" />
-    <state width="1259" height="483" key="GridCell.Tab.0.bottom" timestamp="1594054686805">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="2158" height="323" key="GridCell.Tab.0.bottom" timestamp="1594097543069">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="1259" height="483" key="GridCell.Tab.0.center" timestamp="1594054686805">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="2158" height="323" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
+    <state width="2158" height="323" key="GridCell.Tab.0.center" timestamp="1594097543069">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="1259" height="483" key="GridCell.Tab.0.left" timestamp="1594054686805">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="2158" height="323" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
+    <state width="2158" height="323" key="GridCell.Tab.0.left" timestamp="1594097543068">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state width="1259" height="483" key="GridCell.Tab.0.right" timestamp="1594054686805">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="2158" height="323" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543068" />
+    <state width="2158" height="323" key="GridCell.Tab.0.right" timestamp="1594097543069">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="1259" height="483" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594054686805" />
-    <state x="148" y="0" key="SettingsEditor" timestamp="1594053495156">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="2158" height="323" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594097543069" />
+    <state x="296" y="23" key="SettingsEditor" timestamp="1594092133855">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="148" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594053495156" />
+    <state x="296" y="23" key="SettingsEditor/0.23.2560.1337@0.23.2560.1337" timestamp="1594092133855" />
     <state x="271" y="66" key="Vcs.Push.Dialog.v2" timestamp="1594053211618">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
