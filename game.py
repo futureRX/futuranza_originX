@@ -69,10 +69,16 @@ class State:
             check = check.append(n)
 
     def is_lose(self):
-        #return self.lose
+        """
+        if self.lose:
+            print("lose")
+            return True
+        else:
+            return False
 
         #print("is_loseの確認")
-        """"
+        """
+        """
         k_check = mp.Manager().list()
         p = Pool(mp.cpu_count())
         values = [(k_check,x) for x in range(81)]
@@ -102,6 +108,9 @@ class State:
 
 
         return True
+        
+
+
 
 
 
@@ -168,6 +177,14 @@ class State:
             table_list = []
 
             for j in range(1, 9):
+                #print(j)
+                table = [0] * 81
+                table_list.append(table)
+                for i in range(81):
+                    if pieces[i] == j:
+                        table[i] = 1
+
+            for j in range(11, 19):
                 #print(j)
                 table = [0] * 81
                 table_list.append(table)
@@ -493,7 +510,6 @@ class State:
                     print(state.depth, "手：", 9 - (80 - position_dst) % 9, int((80 - position_dst) / 9) + 1,
                           hzkr0[state.pieces[position_src]])
                 """
-
                 # 歩と香車は、一段目で強制的に成る
                 if position_dst < 9 and (state.pieces[position_src] == 1 or state.pieces[position_src] == 8):
                     state.pieces[position_dst] = state.pieces[position_src] + 10
@@ -508,9 +524,7 @@ class State:
                 # 相手の駒が存在する時は取る
                 piece_type = state.enemy_pieces[80 - position_dst]
                 if piece_type != 0:
-                    if piece_type == 4:
-                        self.lose = True
-                    else:
+                    if piece_type != 4:
                         if piece_type > 8:  # なりごまの処理
                             piece_type = piece_type - 10
                         state.pieces[80 + piece_type] += 1  # 持ち駒+1

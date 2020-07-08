@@ -87,7 +87,8 @@ def multi_play(inputs):
 # セルフプレイ
 def self_play():
     # 学習データ
-    history = [] #mp.Manager().list()
+    history = [] #
+    #history = mp.Manager().list()
 
     # ベストプレイヤーのモデルの読み込み
     model = load_model('model/best.h5')
@@ -102,11 +103,12 @@ def self_play():
         print('\rSelfPlay {}/{}'.format(i+1, SP_GAME_COUNT), end='')
 
     """
-    p =Pool(mp.cpu_count())
+    p =Pool(int(mp.cpu_count()/2))
     values =[(history,model,x) for x in range(SP_GAME_COUNT)]
     result = p.map(multi_play,values)
     p.close()
     """
+
     print('')
 
     # 学習データの保存

@@ -15,9 +15,9 @@ from multiprocessing import Pool
 
 
 # パラメータの準備
-DN_FILTERS  = 256 # 畳み込み層のカーネル数（本家は256）
+DN_FILTERS  = 256 # 畳み込み層のカーネル数（本家は256）ここ限界が。。。大きくしすぎるとメモリあっぱくして、GPUつかわれない
 DN_RESIDUAL_NUM = 19 # 残差ブロックの数（本家は19）
-DN_INPUT_SHAPE = (9, 9, 32) # 入力シェイプ
+DN_INPUT_SHAPE = (9, 9, 48) # 入力シェイプ
 DN_OUTPUT_SIZE = 18100 # 行動数(駒の移動先(81)*駒の移動元(80))
 
 """
@@ -68,7 +68,7 @@ def dual_network():
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
-    # 残差ブロック x 16
+    # 残差ブロック x 19
     for i in range(DN_RESIDUAL_NUM):
         x = residual_block()(x)
 
@@ -85,6 +85,7 @@ def dual_network():
 
     # モデルの作成
     model = Model(inputs=input, outputs=[p,v])
+    model.summary()
 
     # モデルの保存
     os.makedirs('./model/', exist_ok=True) # フォルダがない時は生成
