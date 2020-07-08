@@ -14,14 +14,14 @@ class State:
     def __init__(self, pieces=None, enemy_pieces=None, depth=0):
         # 方向定数
         self.dxy = ((0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1),(1, -2),(-1, -2),
-                    (1, -1), (2, -2), (3, -3), (4, -4), (5, -5), (6, -6), (7, -7), (8, -8),
-                    (-1, 1), (-2, 2), (-3, 3), (-4, 4),(-5, 5), (-6, 6), (-7, 7), (-8, 8),
-                    (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8),
-                    (-1, -1), (-2, -2), (-3, -3), (-4, -4), (-5, -5), (-6, -6), (-7, -7), (-8, -8),
-                    (1, 0), (2, 0),(3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0),
-                    (-1, 0), (-2, 0), (-3, 0), (-4, 0), (-5, 0),(-6, 0), (-7, 0), (-8, 0),
-                    (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8),
-                    (0, -1),(0, -2), (0, -3), (0, -4), (0, -5), (0, -6), (0, -7), (0, -8))
+                    (2, -2), (3, -3), (4, -4), (5, -5), (6, -6), (7, -7), (8, -8),
+                    (-2, 2), (-3, 3), (-4, 4),(-5, 5), (-6, 6), (-7, 7), (-8, 8),
+                    (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8),
+                    (-2, -2), (-3, -3), (-4, -4), (-5, -5), (-6, -6), (-7, -7), (-8, -8),
+                    (2, 0),(3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0),
+                    (-2, 0), (-3, 0), (-4, 0), (-5, 0),(-6, 0), (-7, 0), (-8, 0),
+                    (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8),
+                    (0, -2), (0, -3), (0, -4), (0, -5), (0, -6), (0, -7), (0, -8))
         self.hop = ()
         # 駒の配置
         self.pieces = pieces if pieces != None else [0] * (81 + 8)
@@ -34,6 +34,7 @@ class State:
         """
         # 駒の初期配置
         if pieces == None or enemy_pieces == None:
+
             self.pieces = [0, 0, 0, 0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -44,6 +45,30 @@ class State:
                            0, 2, 0, 0, 0, 0, 0, 3, 0,
                            8, 7, 6, 5, 4, 5, 6, 7, 8,
                            0, 0, 0, 0, 0, 0, 0, 0]
+            """
+            self.pieces = [0, 0, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 4, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 0,
+                           0, 0, 0, 0, 0, 0, 0, 1]
+
+            self.enemy_pieces = [0, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 4, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 1, 1,
+                           1, 1, 1, 1, 1, 1, 1, 4, 0,
+                           0, 0, 0, 0, 0, 0, 0, 1]
+
+            """
             self.enemy_pieces =[0, 0, 0, 0, 0, 0, 0, 0, 0,
                                 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -54,6 +79,8 @@ class State:
                                 0, 2, 0, 0, 0, 0, 0, 3, 0,
                                 8, 7, 6, 5, 4, 5, 6, 7, 8,
                                 0, 0, 0, 0, 0, 0, 0, 0]
+
+
 
         self.lose = False
         self.hansoku = False
@@ -108,11 +135,6 @@ class State:
 
 
         return True
-        
-
-
-
-
 
     #勝ちかどうか
 
@@ -164,6 +186,7 @@ class State:
 
     # 引き分けかどうか
     def is_draw(self):
+        #print("hikiwake")
         return self.depth >= 300  # 300手
 
     # ゲーム終了かどうか
@@ -295,7 +318,7 @@ class State:
                                 if self.pieces[80 + capture] > 0:
                                     #print("歩回避で座標は",p)
                                     #print(self.position_to_action(p, 74 - 1 + capture))
-                                    actions.append(self.position_to_action(p, 74 - 1 + capture))
+                                    actions.append(self.position_to_action(p, 66 - 1 + capture))
                             else:pass
                         else:pass
                     # 香車、一段の禁じ手回避したら
@@ -304,7 +327,7 @@ class State:
                             if self.pieces[80 + capture] > 0:
                                 #print("香車回避",p)
                                 #print(self.position_to_action(p, 74 - 1 + capture))
-                                actions.append(self.position_to_action(p, 74 - 1 + capture))
+                                actions.append(self.position_to_action(p, 66 - 1 + capture))
                         else: pass
                     # 桂馬、一、二段の禁じ手回避したら
                     elif capture == 7:
@@ -312,14 +335,14 @@ class State:
                             if self.pieces[80 + capture] > 0:
                                 #print("桂馬回避",p)
                                 #print(self.position_to_action(p, 74 - 1 + capture))
-                                actions.append(self.position_to_action(p, 74 - 1 + capture))
+                                actions.append(self.position_to_action(p, 66 - 1 + capture))
                         else:pass
                     #歩と香車と桂馬以外は
                     else:
                         if self.pieces[80 + capture] > 0:
                             #print("駒うち",p)
                             #print(self.position_to_action(p, 74 - 1 + capture))
-                            actions.append(self.position_to_action(p, 74 - 1 + capture))
+                            actions.append(self.position_to_action(p, 66 - 1 + capture))
             """"""
         #print("actions",actions)
         return actions
@@ -336,34 +359,35 @@ class State:
         if piece_type == 1:  # hu
             directions = [0]
         elif piece_type == 2:  # kaku
+            directions = [1, 3, 5, 7]
             for n in range(4):
-                for i in range(8):
-                    x = position_src % 9 + self.dxy[9+(8*n)+i+1][0]
-                    y = int(position_src / 9) + self.dxy[9+(8*n)+i+1][1]
+                for i in range(7):
+                    x = position_src % 9 + self.dxy[9+(7*n)+i+1][0]
+                    y = int(position_src / 9) + self.dxy[9+(7*n)+i+1][1]
                     p = x + y * 9
                     # 移動可能時は合法actionとして追加
                     if 0 <= x and x <= 8 and 0 <= y and y <= 8 and self.pieces[p] == 0:
-                        directions.append(9+(8*n)+i+1)
+                        directions.append(9+(7*n)+i+1)
                         if self.enemy_pieces[80 - p]!=0:
                             #print("角break")
                             break
                     else:
                         break
         elif piece_type == 3:  # hisya
+            directions = [2, 4, 6, 8]
             for n in range(4):
-                for i in range(8):
-                    x = position_src % 9 + self.dxy[41+(8*n)+i+1][0]
-                    y = int(position_src / 9) + self.dxy[41+(8*n)+i+1][1]
-
+                for i in range(7):
+                    x = position_src % 9 + self.dxy[37+(7*n)+i+1][0]
+                    y = int(position_src / 9) + self.dxy[37+(7*n)+i+1][1]
                     p = x + y * 9
                     # 移動可能時は合法actionとして追加
                     if 0 <= x and x <= 8 and 0 <= y and y <= 8 and self.pieces[p] == 0:
-                        directions.append(41+(8*n)+i+1)
+                        directions.append(37+(7*n)+i+1)
                         if self.enemy_pieces[80 - p]!=0:
                             break
                     else:
                         break
-            #print(directions)
+            #print(len(directions))
         elif piece_type == 4:  # ou
             directions = [0, 1, 2, 3, 4, 5, 6, 7]
         elif piece_type == 5:  # kin
@@ -373,13 +397,13 @@ class State:
         elif piece_type == 7:  # kei
             directions = [8, 9]
         elif piece_type == 8:  # kyou
-            for i in range(8):
-                x = position_src % 9 + self.dxy[65 + i+1][0]
-                y = int(position_src / 9) + self.dxy[65 + i+1][1]
+            for i in range(7):
+                x = position_src % 9 + self.dxy[58 + i+1][0]
+                y = int(position_src / 9) + self.dxy[58 + i+1][1]
                 p = x + y * 9
                 # 移動可能時は合法actionとして追加
                 if 0 <= x and x <= 8 and 0 <= y and y <= 8 and self.pieces[p] == 0:
-                    directions.append(65 + i + 1)
+                    directions.append(58 + i+1)
                     if self.enemy_pieces[80 - p]==0:
                         break
                 else:
@@ -389,13 +413,13 @@ class State:
         elif piece_type == 12:  # uma
             directions = [2,4,6,8]
             for n in range(4):
-                for i in range(8):
-                    x = position_src % 9 + self.dxy[9+(8*n)+i+1][0]
-                    y = int(position_src / 9) + self.dxy[9+(8*n)+i+1][1]
+                for i in range(7):
+                    x = position_src % 9 + self.dxy[9+(7*n)+i+1][0]
+                    y = int(position_src / 9) + self.dxy[9+(7*n)+i+1][1]
                     p = x + y * 9
                     # 移動可能時は合法actionとして追加
                     if 0 <= x and x <= 8 and 0 <= y and y <= 8 and self.pieces[p] == 0:
-                        directions.append(9 + (8 * n) + i + 1)
+                        directions.append(9 + (7 * n) + i+1)
                         if self.enemy_pieces[80 - p] != 0:
                             break
                     else:
@@ -403,14 +427,14 @@ class State:
         elif piece_type == 13:  # ryu
             directions = [1, 3, 5, 7]
             for n in range(4):
-                for i in range(8):
-                    x = position_src % 9 + self.dxy[41+(8*n)+i+1][0]
-                    y = int(position_src / 9) + self.dxy[41+(8*n)+i+1][1]
+                for i in range(7):
+                    x = position_src % 9 + self.dxy[37+(7*n)+i][0]
+                    y = int(position_src / 9) + self.dxy[37+(7*n)+i][1]
 
                     p = x + y * 9
                     # 移動可能時は合法actionとして追加
                     if 0 <= x and x <= 8 and 0 <= y and y <= 8 and self.pieces[p] == 0:
-                        directions.append(41 + (8 * n) + i + 1)
+                        directions.append(37 + (7 * n) + i+1)
                         if self.enemy_pieces[80 - p] != 0:
                             break
                     else:
@@ -443,7 +467,7 @@ class State:
                     #print(self.position_to_action(p, direction))
                     actions.append(self.position_to_action(p, direction))
 
-
+        #print(actions)
         return actions
 
     # 次の状態の取得
@@ -452,7 +476,7 @@ class State:
 
         # 次の状態の作成
         state = State(self.pieces.copy(), self.enemy_pieces.copy(), self.depth + 1)
-
+        #print(action)
         if action > 9999:
             action = action-10000
             position_dst, position_src = self.action_to_position(action)
@@ -494,13 +518,13 @@ class State:
             #print(action, position_dst, position_src)
 
             # 駒の移動
-            if position_src < 74:  # dxyの数
+            if position_src < 66:  # dxyの数
                 # 駒の移動元
                 #print(position_dst,position_src,action)
                 x = position_dst % 9 - self.dxy[position_src][0]
                 y = int(position_dst / 9) - self.dxy[position_src][1]
                 position_src = x + y * 9
-
+                #print(position_src)
                 # 駒の移動
                 """
                 if self.depth % 2 == 0:
@@ -531,8 +555,8 @@ class State:
                     state.enemy_pieces[80 - position_dst] = 0
 
                 # 持ち駒の配置
-            elif position_src < 82:
-                capture = position_src - 73
+            elif position_src < 74:
+                capture = position_src - 65
                 xx = position_dst % 9 + 1
                 yy = int(position_dst / 9) + 1
 
@@ -561,8 +585,8 @@ class State:
     def __str__(self):
         pieces0 = self.pieces if self.is_first_player() else self.enemy_pieces
         pieces1 = self.enemy_pieces if self.is_first_player() else self.pieces
-        hzkr0 = ('  ', '歩', '角', '飛', '王', '金', '銀', '桂', '香', '','', 'と', '馬', '龍', '  ', '  ', 'NG', 'KM', 'KY')
-        hzkr1 = ('  ', 'ふ', 'ｶｸ', 'ﾋｼ', 'ｵｳ', 'ｷﾝ', 'ｷﾞ', 'ｹｲ', 'ｷｮ', '','', 'と', '馬', '龍', '  ', '  ', 'NG', 'KM', 'KY')
+        hzkr0 = ('  ', '歩', '角', '飛', '王', '金', '銀', '桂', '香', '','', 'と', '馬', '龍', '王', '金', 'NG', 'KM', 'KY')
+        hzkr1 = ('  ', 'ふ', 'ｶｸ', 'ﾋｼ', 'ｵｳ', 'ｷﾝ', 'ｷﾞ', 'ｹｲ', 'ｷｮ', '','', 'と', '馬', '龍', 'ｵｳ', 'ｷﾝ', 'NG', 'KM', 'KY')
 
         # 後手の持ち駒
         str = ' ['

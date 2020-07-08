@@ -25,7 +25,7 @@ class GameUI(tk.Frame):
 
         # ゲーム状態の生成
         self.state = State()
-        self.select = -1  # 選択(-1:なし, 0～11:マス, 12～14:持ち駒)
+        self.select = -1  # 選択(-1:なし, 0～80:マス, 12～14:持ち駒)
 
         # 方向定数
         self.dxy = ((0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (1, -2), (-1, -2),
@@ -52,11 +52,11 @@ class GameUI(tk.Frame):
             self.images.append((
                 ImageTk.PhotoImage(image),
                 ImageTk.PhotoImage(image.rotate(180)),
-                ImageTk.PhotoImage(image.resize((40, 40))),
-                ImageTk.PhotoImage(image.resize((40, 40)).rotate(180))))
+                ImageTk.PhotoImage(image.resize((30, 30))),
+                ImageTk.PhotoImage(image.resize((30, 30)).rotate(180))))
 
         # キャンバスの生成
-        self.c = tk.Canvas(self, width=720, height=800, highlightthickness=0)
+        self.c = tk.Canvas(self, width=540, height=600, highlightthickness=0)
         self.c.bind('<Button-1>', self.turn_of_human)
         self.c.pack()
 
@@ -82,17 +82,19 @@ class GameUI(tk.Frame):
             if self.state.pieces[81 + i] >= 1: captures.append(1 + i)
 
         # 駒の選択と移動の位置の計算(0-80:マス, 81-88:持ち駒)
-        p = int(event.x / 80) + int((event.y - 40) / 80) * 9
-        if 40 <= event.y and event.y <= 760:
+        p = int(event.x / 60) + int((event.y - 30) / 60) * 9
+
+        if 30 <= event.y and event.y <= 570:
             select = p
-        elif event.x < len(captures) * 40 and event.y > 760:
-            select = 81 + int(event.x / 40)
+        elif event.x < len(captures) * 30 and event.y > 570:
+            select = 81 + int(event.x / 30)
         else:
             return
 
         # 駒の選択
         if self.select < 0:
             self.select = select
+            print(self.select)
             self.on_draw()
             return
 
@@ -105,9 +107,11 @@ class GameUI(tk.Frame):
             # 持ち駒の配置時
             else:
                 action = self.state.position_to_action(p, 74 - 1 + captures[self.select - 81])
-
+        print(action)
+        print(self.state.legal_actions())
         # 合法手でない時
         if not (action in self.state.legal_actions()):
+            #print(self.select)
             self.select = -1
             self.on_draw()
             return
@@ -143,14 +147,14 @@ class GameUI(tk.Frame):
 
     # 駒の描画
     def draw_piece(self, index, first_player, piece_type):
-        x = (index % 9) * 80 + 20
-        y = int(index / 9) * 80 + 40 + 20
+        x = (index % 9) * 60 #+15
+        y = int(index / 9) * 60 + 30 #+ 15
         index = 0 if first_player else 1
         self.c.create_image(x, y, image=self.images[piece_type][index], anchor=tk.NW)
 
     # 持ち駒の描画
     def draw_capture(self, first_player, pieces):
-        index, x, dx, y = (2, 0, 40, 760) if first_player else (3, 680, -40, 0)
+        index, x, dx, y = (2, 0, 30, 570) if first_player else (3, 510, -30, 0)
         captures = []
         for i in range(8):
             if pieces[81 + i] >= 2: captures.append(1 + i)
@@ -169,11 +173,11 @@ class GameUI(tk.Frame):
     def on_draw(self):
         # マス目
         self.c.delete('all')
-        self.c.create_rectangle(0, 0, 720, 800, width=0.0, fill='#EDAA56')
+        self.c.create_rectangle(0, 0, 540, 600, width=0.0, fill='#EDAA56')
         for i in range(1, 9):
-            self.c.create_line(i * 80 + 1, 40, i * 80, 760, width=2.0, fill='#000000')
+            self.c.create_line(i * 60 + 1, 30, i * 60, 570, width=2.0, fill='#000000')
         for i in range(10):
-            self.c.create_line(0, 40 + i * 80, 720, 40 + i * 80, width=2.0, fill='#000000')
+            self.c.create_line(0, 30 + i * 60, 720, 30 + i * 60, width=2.0, fill='#000000')
 
         # 駒
         for p in range(81):
@@ -189,9 +193,9 @@ class GameUI(tk.Frame):
 
         # 選択カーソル
         if 0 <= self.select and self.select <81:
-            self.draw_cursor(int(self.select % 9) * 80, int(self.select / 9) * 80 + 40, 80)
+            self.draw_cursor(int(self.select % 9) * 60, int(self.select / 9) * 60 + 30, 60)
         elif 81 <= self.select:
-            self.draw_cursor((self.select - 81) * 40, 760, 40)
+            self.draw_cursor((self.select - 81) * 30, 570, 30)
 
 # ゲームUIの実行
 f = GameUI(model=model)

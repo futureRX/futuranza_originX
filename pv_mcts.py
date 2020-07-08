@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 
 # パラメータの準備
-PV_EVALUATE_COUNT = 500 # 1推論あたりのシミュレーション回数（本家は1600）子ノード展開までの回数
+PV_EVALUATE_COUNT = 1000 # 1推論あたりのシミュレーション回数（本家は1600）子ノード展開までの回数
 
 # 推論
 def predict(model, state):
@@ -27,7 +27,7 @@ def predict(model, state):
     x = x.reshape(c, a, b).transpose(1, 2, 0).reshape(1, a, b, c)
 
     # 推論
-    y = model.predict(x, batch_size=1024)
+    y = model.predict(x, batch_size=1)
 
     # 方策の取得
     policies = y[0][0][list(state.legal_actions())] # 合法手のみ
@@ -111,6 +111,7 @@ def pv_mcts_scores(model, state, temperature):
 
     # 複数回の評価の実行
     for _ in range(PV_EVALUATE_COUNT):
+        print('\rroot_node_evaluate {}/{}'.format(_ + 1, PV_EVALUATE_COUNT), end='')
         root_node.evaluate()
 
     # 合法手の確率分布

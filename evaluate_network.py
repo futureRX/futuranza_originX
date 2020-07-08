@@ -15,7 +15,7 @@ from shutil import copy
 import numpy as np
 
 # パラメータの準備
-EN_GAME_COUNT = 100 # 1評価あたりのゲーム数（本家は400）
+EN_GAME_COUNT = 200 # 1評価あたりのゲーム数（本家は400）
 EN_TEMPERATURE = 1.0 # ボルツマン分布の温度
 
 # 先手プレイヤーのポイント
